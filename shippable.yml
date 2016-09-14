@@ -10,10 +10,10 @@ node_js:
   #- iojs-v3
   #- 5.0
 
-env:
-  global:
-    - FOO=Bar
-    - BAR=Foo
+# env:
+#   global:
+#     - FOO=Bar
+#     - BAR=Foo
 
 #in orderfail for 4.2.3 version
 #matrix:
