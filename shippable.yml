@@ -31,6 +31,28 @@ build:
     
 integrations:
   notifications:
+    - integrationName: ship-samplegolproject
+      type: webhook
+      payload:
+        - API_URL=$SHIPPABLE_API_URL
+        - CONTAINER_NAME=$SHIPPABLE_CONTAINER_NAME
+        - FOO=bar
+        - BOO=buzz
+      on_start: always
+      on_success: always
+      on_failure: always
+      on_pull_request: always
+      
+    - integrationName: ship-samplegolissue
+      type: webhook
+      payload:
+        - title=Failure - $REPO_FULL_NAME - $BUILD_NUMBER
+        - body=Shippable Run $BUILD_NUMBER ($BUILD_URL) failed for $COMPARE_URL
+      on_start: always
+      on_success: always
+      on_failure: always
+      on_pull_request: always
+      
     - integrationName: email
       type: email
       recipients: 
