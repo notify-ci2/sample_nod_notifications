@@ -38,49 +38,49 @@ integrations:
         - CONTAINER_NAME=$SHIPPABLE_CONTAINER_NAME
         - FOO=bar
         - BOO=buzz
-      on_start: always
-      on_success: always
-      on_failure: always
-      on_pull_request: always
+      on_start: never
+      on_success: never
+      on_failure: never
+      on_pull_request: never
       
     - integrationName: ship-samplegolissue
       type: webhook
       payload:
         - title=Failure - $REPO_FULL_NAME - $BUILD_NUMBER
         - body=Shippable Run $BUILD_NUMBER ($BUILD_URL) failed for $COMPARE_URL
-      on_start: always
-      on_success: always
-      on_failure: always
-      on_pull_request: always
+      on_start: never
+      on_success: never
+      on_failure: never
+      on_pull_request: never
       
     - integrationName: email
       type: email
       recipients: 
         - shiphitchcock1@gmail.com
         - varsha@shippable.com
-      on_start: always
-      on_success: always
-      on_failure: always
-      on_pull_request: always
+      on_start: never
+      on_success: never
+      on_failure: never
+      on_pull_request: never
       
     - integrationName: ship-slack
       type: slack
       recipients:
         - "#hitchcock1-public"
         - pvt-channel
-      on_start: always
-      on_success: always
-      on_failure: always
-      on_pull_request: always
+      on_start: never
+      on_success: never
+      on_failure: never
+      on_pull_request: never
       
     - integrationName: irc
       type: irc
       recipients:
         - "chat.freenode.net#test-cock1"
-      on_start: always
-      on_success: always
-      on_failure: always
-      on_pull_request: always
+      on_start: never
+      on_success: never
+      on_failure: never
+      on_pull_request: never
       
     - integrationName: ship-hipchat
       type: hipchat
@@ -88,7 +88,7 @@ integrations:
         - '#hitchcock1'
         - '#hitchcock1pvt'
         - '@shiphitchcock1'
-      on_start: always
-      on_success: always
-      on_failure: always
-      on_pull_request: always
+      on_start: never
+      on_success: never
+      on_failure: never
+      on_pull_request: never
